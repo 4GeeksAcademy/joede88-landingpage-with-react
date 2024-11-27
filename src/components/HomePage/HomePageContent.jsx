@@ -1,23 +1,22 @@
-import Alert from "react-bootstrap/Alert";
+
 import Container from "react-bootstrap/Container";
-import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
+import CardGenerica from "./CardGenerica";
+import AlertBox from "./AlertBox";
+import Footer from "./Footer";
+import NavBar from "./Navbar";
 
 const HomePageContent = () => {
   return (
-    <Container fluid>
-      <Row>
-        <Col>
-          <Alert variant="secondary">
-            <Alert.Heading>Hey, nice to see you</Alert.Heading>
-            <p>
-              Bienvenid@s a mi primer boilerplate. Aprovecha este espacio para
-              crear todo lo que se te ocurra.
-            </p>
-          </Alert>
-        </Col>
-      </Row>
-    </Container>
+    <>
+      <NavBar></NavBar>
+      <Container fluid>
+        <AlertBox></AlertBox>
+        <CardGenerica></CardGenerica>
+      </Container>
+      <div className=" mb-5 text-center">
+        <Footer></Footer>
+      </div>
+    </>
   );
 };
 
